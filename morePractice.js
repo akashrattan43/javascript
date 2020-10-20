@@ -20,3 +20,10 @@ let eligible = high || goodCredit
 let applicationRefused = !eligible
 console.log(applicationRefused)
 
+Bitwise operators
+console.log(1 | 2)
+console.log(1 &  2)
+
+Operator Precedence
+let x = 2 + 3 * 4
+console.log(x)
