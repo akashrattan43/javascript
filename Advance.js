@@ -133,3 +133,34 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([3, 10, 5], 3);
+
+const circle = {
+  radius: 1
+}
+
+circle.color = 'yellow'
+circle.draw = function() {}
+
+delete circle.color
+delete circle.draw
+
+console.log(circle)
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log('draw')
+  }
+}
+
+
+const circle = new Circle(2)
+
+let obj = {value: 10}
+
+function increase(obj) {
+  obj.value++
+}
+
+increase(obj)
+console.log(obj)
