@@ -104,3 +104,32 @@ const circle = {
     console.log('draw')
   }
 }
+
+function createCirlce(radius) {
+  return {
+  radius,
+
+  draw() {
+    console.log('draw')
+
+  }
+}
+}
+
+const circle1 = createCirlce(1);
+console.log(circle1)
+
+function getIndexToIns(arr, num) {
+  arr.sort(function(a,b){
+    return a-b;
+  });
+
+  for(var i=0;i<arr.length;i++){
+    if(num < arr[i]){
+      arr.splice(i,0,num);
+    }
+  }
+  return arr; 
+}
+
+getIndexToIns([3, 10, 5], 3);
