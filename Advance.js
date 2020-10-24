@@ -164,3 +164,34 @@ function increase(obj) {
 
 increase(obj)
 console.log(obj)
+
+const circle = {
+  radius: 1,
+  draw : function() {
+    console.log('draw')
+  }
+}
+
+for (let key in circle) 
+  console.log(key)
+
+//cloning 
+const circle = {
+  radius: 1,
+  draw () {
+    console.log('draw')
+  }
+}
+
+const another = {}
+
+for (let key in circle)
+  another[key] = circle[key]
+
+const another = Object.assign({
+  color: 'yellow'
+}, circle);
+
+const another = { ...circle};
+ 
+console.log(another)
