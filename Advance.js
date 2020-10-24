@@ -195,3 +195,40 @@ const another = Object.assign({
 const another = { ...circle};
  
 console.log(another)
+
+// Garbage collection
+
+let circle = {}
+console.log(circle)
+
+// find the variable that no longer in use deallocation 
+
+// Math
+
+const random = Math.random(2, 3)
+
+console.log(random)
+
+
+// string primitive
+const message = 'This is my first message'
+message.length
+message.endsWith('e')
+message.indexOf('my')
+
+// Backticks
+
+const another = `this is my 'first' message`
+console.log(another)
+
+//date
+
+const now = new Date()
+const date1 = new Date(' May 11 2018 09:00')
+const date2 = new Date( 2018, 4, 11, 9)
+
+
+now.setFullYear(2017)
+console.log(now)
+console.log(date1)
+console.log(date2)
