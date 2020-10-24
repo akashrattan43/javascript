@@ -232,3 +232,89 @@ now.setFullYear(2017)
 console.log(now)
 console.log(date1)
 console.log(date2)
+
+
+//array
+
+const numbers = [3, 4]
+
+//End
+//push
+numbers.push(5, 6)
+
+
+//beginning 
+
+numbers.unshift(1, 2)
+
+// middle 
+numbers.splice(2, 0, 'a', 'b')
+console.log(numbers)
+
+const numbers = [1, 2, 3, 1,  4]
+
+console.log(numbers.indexOf(1))
+console.log(numbers.lastIndexOf(1))
+
+console.log(numbers.indexOf(1) !== -1)
+
+const courses = [
+  {id: 1, name: 'a'},
+  {id: 2, name: 'b'}
+]
+
+// console.log(courses.includes({id:1, name: 'a'}))
+
+let course = courses.find(function(course){
+  return course.name === 'b' 
+})
+
+console.log(course)
+
+//index
+
+const courses = [
+  {id: 1, name: 'a'},
+  {id: 2, name: 'b'}
+]
+
+// console.log(courses.includes({id:1, name: 'a'}))
+
+let course = courses.findIndex(function(course){
+  return course.name === 'a' 
+})
+
+console.log(course)
+
+const courses = [
+  {id: 1, name: 'a'},
+  {id: 2, name: 'b'}
+]
+
+// console.log(courses.includes({id:1, name: 'a'}))
+
+let course = courses.findIndex(function(course){
+  return course.name === 'a' 
+})
+
+console.log(course)
+
+let numbers = [1, 2, 3, 4]
+let another = numbers;
+// empting array;
+
+// solution 1 
+numbers = []
+
+// solution 2 
+numbers.length = 0
+
+// solution 3
+numbers.splice(0, numbers.length)
+
+// solution 4
+while (numbers.length > 0)
+numbers.pop()
+
+console.log(numbers)
+console.log(another)
