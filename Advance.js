@@ -354,3 +354,69 @@ console.log(parts)
 const combined = parts.join('-')
 console.log(combined)
 
+
+const numbers = [2, 3, 1]
+
+numbers.sort()
+console.log(numbers)
+
+numbers.reverse()
+console.log(numbers)
+
+const courses = [
+  {id: 1, name: 'Node.js'},
+  {id: 2, name: 'Javascript'}
+]
+
+courses.sort(function(a, b) {
+  if (a.name < b.name) return -1;
+  if (a.name > b.name) return 1;
+  return 0
+})
+console.log(courses)
+
+const numbers = [1, 2, 3]
+
+const allPositive = numbers.every(function(value) {
+  return value >= 0
+})
+
+console.log(allPositive)
+
+const numbers = [1, -1, 2, 3]
+
+const allOnePositive = numbers.some(function(value) {
+  return value >= 0
+})
+
+console.log(allOnePositive)
+
+const numbers = [1, -1, 2, 3]
+
+const filter = numbers.filter(value => {
+  return value >= 0
+})
+
+console.log(filter)
+
+const numbers = [1, -1, 2, 3]
+
+const filtered = numbers.filter(value => value >= 0)
+
+const items = filtered.map(n => '<li>' + n + '</li>')
+
+const html ='<ul>' + items.join('') + '<ul> '
+
+console.log(html)
+const numbers = [1, -1, 2, 3]
+
+const items = numbers
+.filter(value => value >= 0)
+.map(n => ({value: n}))
+
+
+
+console.log()
+
+
+
