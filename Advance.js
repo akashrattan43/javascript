@@ -318,3 +318,39 @@ numbers.pop()
 
 console.log(numbers)
 console.log(another)
+
+//concat
+
+const first = [{id: 1}]
+const second = [4, 5, 6]
+
+const combined = first.concat(second)
+first[0].id = 10
+// slice
+
+const slice = combined.slice(2)
+console.log(combined)
+console.log(slice)
+
+const combined = [...first, ...second]
+
+const numbers = [1, 2, 3]
+
+for (let number of numbers)
+  console.log(number)
+
+  numbers.forEach(nmber => 
+    console.log(nmber)
+  )
+
+
+  const joint = numbers.join(',')
+
+console.log(joint)
+
+const message = 'This is my first message'
+const parts = message.split(' ')
+console.log(parts)
+const combined = parts.join('-')
+console.log(combined)
+
