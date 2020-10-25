@@ -486,3 +486,40 @@ function sum (discount, ...prices) {
 }
 
 console.log(sum(0.1, 20, 30)) 
+
+function interest (principal, rate, years) {
+  rate = rate || 3.5
+  years = years || 5
+  return principal * rate / 100 * years
+}
+
+console.log(interest(1000))
+
+function interest (principal, rate = 3.5, years = 5) {
+
+  return principal * rate / 100 * years
+}
+
+console.log(interest(1000))
+
+// GETTERS AND SETTERS
+
+const person = {
+  firstName: 'Akash',
+  lastName: 'Rattan',
+  get fullName () {
+    return `${person.firstName} ${person.lastName}`
+  }, 
+    set fullName(value) {
+      const parts = value.split(' ')
+      this.firstName = parts[0]
+      this.lastName = parts[1]
+    }
+}
+
+person.fullName = 'John Smith'
+
+console.log(person.fullName)
+
+// ARROW HANDLING
+
