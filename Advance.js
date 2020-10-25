@@ -432,4 +432,57 @@ for (let n of numbers)
 
   console.log(sum)
 
+// function declaration
 
+function walk() {
+  console.log('walk')
+}
+
+//function expression
+
+let run = function () {
+  console.log('run')
+};
+
+walk()
+run()
+let move = run;
+walk()
+move()
+
+// function declaration
+walk()
+
+function walk() {
+  console.log('walk')
+}
+
+//function expression
+//run() if run it before it will not work
+let run = function () {
+  console.log('run')
+};
+//HOISTING
+
+function sum (a, b) {
+
+  let total = 0;
+  for (let value of arguments)
+    total += value
+  // console.log(arguments)
+  return total
+}
+
+console.log(sum(1, 2, 3, 4))
+
+
+//REST OPERATOR
+
+function sum (discount, ...prices) {
+  // return args.reduce((a, b) => a+b )
+
+  const total = prices.reduce((a, b) => a + b)
+  return total * (1 - discount)
+}
+
+console.log(sum(0.1, 20, 30)) 
