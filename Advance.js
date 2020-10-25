@@ -523,3 +523,70 @@ console.log(person.fullName)
 
 // ARROW HANDLING
 
+//SCOPE
+const color = 'red'
+
+function start () {
+const message = 'hi';
+const color = 'blue'
+console.log(color)
+}
+
+function stop () {
+  const message = 'bye';
+}
+
+start ()
+
+function start() {
+  for (let i = 0; i < 5; i++){
+    console.log(i)
+  }
+}
+
+
+// var = create function scope varible 
+// es6 =  let const => block scoped
+
+start()
+
+// This keyword
+
+const video = {
+  title: 'a',
+  play () {
+    console.log(this)
+  }
+}
+
+video.stop = function() {
+  console.log(this)
+}
+
+video.stop()
+
+function playVideo() {
+  console.log(this)
+}
+playVideo()
+
+function Video(title) {
+  this.title = title
+  console.log(this)
+}
+
+const v = new Video('b')
+
+// This keyword
+
+const video = {
+  title: 'a',
+  tags: ['a', 'b', 'c'],
+  showTags () {
+    this.tags.forEach(function(tag) {
+      console.log(this.title, tag)
+    }, this)
+  }
+}
+
+video.showTags()
